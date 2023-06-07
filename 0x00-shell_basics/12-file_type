@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "This is a file called iamfile" >> iamfile: /tmp
+file/tmp/iamafile
