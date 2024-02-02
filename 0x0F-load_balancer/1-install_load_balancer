@@ -40,8 +40,8 @@ frontend kingbygone-tech-frontend
 
 backend kingbygone-tech-backend
     balance roundrobin
-    server 151666-web-01 100.25.159.232:80 check
-    server 151666-web-02 100.26.255.91:80 check
+    server 434981-web-01 100.25.159.232:80 check
+    server 434981-web-02 100.26.255.91:80 check
 "
 
 # shellcheck disable=SC2154
