@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Create a new user named nginx if not already exists
+if ! id -u nginx > /dev/null 2>&1; then
+    adduser --system --no-create-home --disabled-login --disabled-password --group nginx
+fi
+
+# Update the Nginx configuration to run as the nginx user
+sed -i 's/^user .*;$/user nginx;/' /etc/nginx/nginx.conf
+
+# Set the appropriate permissions for Nginx directories
+chown -R nginx:nginx /var/lib/nginx /var/log/nginx
+
+# Restart Nginx to apply the changes
+service nginx restart
+
+# Check if Nginx is running as the nginx user
+ps auxff | grep 'nginx: master process' | grep -q 'nginx' && echo "Nginx is running as nginx user" || echo "Failed to configure Nginx user"
+
+# Check if Nginx is listening on all active IPs on port 8080
+nc -z 0 8080 && echo "Nginx is listening on port 8080" || echo "Failed to bind Nginx to port 8080"
