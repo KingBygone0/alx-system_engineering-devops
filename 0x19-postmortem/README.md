@@ -8,7 +8,7 @@
 <img src="https://raw.githubusercontent.com/MitaliSengupta/holberton-system_engineering-devops/master/0x19-postmortem/image.gif" width=100% height=100% />
 </p>
 
-### Incident report for [504 error / Site Outage](https://github.com/MitaliSengupta/holberton-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
+### Incident report for [504 error / Site Outage](https://github.com/kingbygone0/alx-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
 
 #### Summary
 
